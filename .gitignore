@@ -1,0 +1,14 @@
+# Build outputs
+backend/target/
+web/dist/
+
+# Dependencies
+web/node_modules/
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
