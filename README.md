@@ -11,14 +11,22 @@ Simple authentication demo with a Spring Boot backend and a React (Vite) web cli
 - React 18 + Vite
 
 ## Steps to run backend
-1. Open [backend/src/main/resources/application.properties](backend/src/main/resources/application.properties) and set MySQL credentials.
-2. Create the database `it342` in MySQL.
-3. Create the `users` table using [backend/src/main/resources/schema.sql](backend/src/main/resources/schema.sql) (or allow JPA `ddl-auto=update`).
-4. From the `backend/` folder, run:
-	 ```bash
-	 ./mvnw spring-boot:run
-	 ```
-	 The API runs at `http://localhost:8080`.
+1. **Set up MySQL database:**
+   - See detailed instructions in [backend/DATABASE_SETUP.md](backend/DATABASE_SETUP.md)
+   - Quick start: Ensure MySQL is running and update credentials in `application.properties`
+   - Or use environment variables: `DB_USERNAME`, `DB_PASSWORD`, `JWT_SECRET`
+
+2. **Configure database credentials:**
+   - Option A: Edit [backend/src/main/resources/application.properties](backend/src/main/resources/application.properties)
+   - Option B: Set environment variables (recommended for production)
+   - The database `it342` will be created automatically if it doesn't exist
+
+3. **Run the application:**
+   ```bash
+   cd backend
+   mvn spring-boot:run
+   ```
+   The API runs at `http://localhost:8080`.
 
 ## Steps to run web app
 1. From the `web/` folder, install dependencies:

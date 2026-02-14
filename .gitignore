@@ -5,6 +5,19 @@ web/dist/
 # Dependencies
 web/node_modules/
 
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+backend/.env
+*.key
+*.pem
+
+# Database
+*.db
+*.sqlite
+*.sql.backup
+
 # Logs
 *.log
 
@@ -15,3 +28,7 @@ docs/~$*
 .DS_Store
 Thumbs.db
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
